@@ -8,10 +8,9 @@ import com.facebook.react.uimanager.ThemedReactContext;
 public class FlipViewManager extends SimpleViewManager<ReactFlipView> {
 
     private final static String REACT_CLASS = "RCTFlipView";
-    private Activity mActivity = null;
 
-    public FlipViewManager(Activity activity) {
-        mActivity = activity;
+    public FlipViewManager() {
+
     }
 
     @Override

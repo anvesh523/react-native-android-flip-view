@@ -14,10 +14,8 @@ import java.util.List;
 
 public class FlipReactPackage implements ReactPackage {
 
-    private Activity mActivity = null;
+    public FlipReactPackage() {
 
-    public FlipReactPackage(Activity activity) {
-        mActivity = activity;
     }
 
     @Override
@@ -28,7 +26,7 @@ public class FlipReactPackage implements ReactPackage {
         return new ArrayList<>();
     }
 
-    @Override
+    // @Override
     public List<Class<? extends JavaScriptModule>> createJSModules() {
         return Collections.emptyList();
     }
@@ -36,7 +34,7 @@ public class FlipReactPackage implements ReactPackage {
     @Override
     public List<ViewManager> createViewManagers(ReactApplicationContext reactContext) {
         List<ViewManager> manager = new ArrayList<>();
-        manager.add(new FlipViewManager(mActivity));
+        manager.add(new FlipViewManager());
         return manager;
     }
 }
