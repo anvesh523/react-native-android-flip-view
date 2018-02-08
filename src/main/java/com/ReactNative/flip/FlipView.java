@@ -18,12 +18,10 @@ import android.view.ViewGroup;
 import android.widget.AbsListView;
 import android.widget.Adapter;
 import android.widget.AdapterView;
-
 import com.ReactNative.utils.AphidLog;
-
 import junit.framework.Assert;
-
 import java.util.LinkedList;
+
 
 public class FlipView extends AdapterView<Adapter> {
 
@@ -76,46 +74,6 @@ public class FlipView extends AdapterView<Adapter> {
     public FlipView(Context context, int flipOrientation) {
         super(context);
         init(context, flipOrientation);
-    }
-
-    /**
-     * Constructor required for XML inflation.
-     */
-    public FlipView(Context context, AttributeSet attrs, int defStyle) {
-        super(context, attrs, defStyle);
-
-        int orientation = VERTICAL;
-
-        TypedArray
-                a =
-                context.getTheme().obtainStyledAttributes(attrs, R.styleable.FlipView, 0, 0);
-
-        try {
-            int value = a.getInteger(R.styleable.FlipView_orientation, VERTICAL);
-            if (value == HORIZONTAL) {
-                orientation = HORIZONTAL;
-            }
-
-            value = a.getInteger(R.styleable.FlipView_animationBitmapFormat, 0);
-            if (value == 1) {
-                setAnimationBitmapFormat(Bitmap.Config.ARGB_4444);
-            } else if (value == 2) {
-                setAnimationBitmapFormat(Bitmap.Config.RGB_565);
-            } else {
-                setAnimationBitmapFormat(Bitmap.Config.ARGB_8888);
-            }
-        } finally {
-            a.recycle();
-        }
-
-        init(context, orientation);
-    }
-
-    /**
-     * Constructor required for XML inflation.
-     */
-    public FlipView(Context context, AttributeSet attrs) {
-        this(context, attrs, 0);
     }
 
     private void init(Context context, int orientation) {
