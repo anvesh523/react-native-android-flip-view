@@ -1,0 +1,27 @@
+{
+  "name": "react-native-android-flip-view",
+  "version": "0.1.1",
+  "description": "React-native component for android Flip animation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/anvesh523/react-native-android-flip-view.git"
+  },
+  "keywords": [
+    "react-component",
+    "react-native",
+    "android",
+    "flip-view",
+	"flip"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/anvesh523/react-native-android-flip-view.git/issues"
+  },
+  "homepage": "https://github.com/anvesh523/react-native-android-flip-view.git#readme",
+  "dependencies": {}
+}
